@@ -167,3 +167,10 @@
   margin: 4px 2px;
   cursor: pointer;
 }
+
+
+.canvassignaure {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
