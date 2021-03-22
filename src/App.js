@@ -145,14 +145,14 @@ function App() {
     const selectPage = pages[pdfFileData.pageNumber]
     const { height, width } = selectPage.getSize()
 
-    let hue = {
+    let data = {
       x: pdfFileData.x,
       y: height - pdfFileData.y - pdfFileData.height,
       width: pdfFileData.width,
       height: pdfFileData.height,
     }
 
-    selectPage.drawImage(pngImage, hue)
+    selectPage.drawImage(pngImage, data)
 
     for (let i = 0; i < 20; i++) {
       selectPage.drawCircle({
@@ -173,7 +173,7 @@ function App() {
     }
 
     const pdfBytes = await pdfDoc.saveAsBase64()
-    let elnuevopdf = 'data:application/pdf;filename=hue.pdf;base64,' + pdfBytes
+    let elnuevopdf = 'data:application/pdf;filename=data.pdf;base64,' + pdfBytes
     setPdf(elnuevopdf);
   }
 
